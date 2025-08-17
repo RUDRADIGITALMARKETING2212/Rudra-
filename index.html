@@ -485,3 +485,139 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudra Digital Marketing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f0f9ff, #cbebff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 20px 0;
+      color: #004080;
+    }
+    h3 {
+      margin: 5px 0;
+      color: #333;
+    }
+    .hidden-section {
+      display: none;
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 12px 24px;
+      margin: 20px;
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #cc5200;
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 280px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .card button {
+      background: #28a745;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .card button:hover {
+      background: #1e7e34;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Rudra Digital Marketing Company</h1>
+  <h3> Founder / Director: Anand Shukla (📱 8467063125)</h3>
+  <h3> Co-Founder / Manager: Anupam pandey (📱 9161174816)</h3>
+
+  <!-- Toggle Button -->
+  <button class="btn" onclick="toggleServices()" id="toggleBtn">
+    👉 Show Our Services
+  </button>
+
+  <!-- Hidden Section -->
+  <div id="services" class="hidden-section">
+    <div class="card-container">
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>Referral Program</h3>
+        <p>Bring a client and earn <b>₹200</b> per client.</p>
+        <button onclick="openWhatsApp('Referral Program','918467063125')">company से Contact</button>
+       
+      </div>
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Get your website designed by professionals.</p>
+      
+        <button onclick="openWhatsApp('Web Development','919161174816')">company से Contact</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    function toggleServices() {
+      let section = document.getElementById("services");
+      let btn = document.getElementById("toggleBtn");
+      if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+        btn.innerText = "❌ Hide Services";
+      } else {
+        section.style.display = "none";
+        btn.innerText = "👉 Show Our Services";
+      }
+    }
+
+    function openWhatsApp(service, number) {
+      let msg = `Hello, I'm interested in ${service}.`;
+      window.open(`https://wa.me/${number}?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
