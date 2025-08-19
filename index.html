@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rudra Digital Marketing Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f6fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #0d1117;
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.company-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffdd57;
+  text-shadow: 1px 1px 5px #000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffdd57;
+  transform: scale(1.1);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Banner with scrolling quotes */
+.ad-banner {
+  background-color: #ffdd57;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.ad-track {
+  display: inline-block;
+  animation: scroll 25s linear infinite;
+}
+
+.ad-content span {
+  display: inline-block;
+  margin-right: 50px;
+  font-weight: 600;
+  color: #0d1117;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 500px;
+  background: url('https://source.unsplash.com/1600x900/?digital,marketing') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13,17,23,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px #000;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #ffdd57;
+  color: #0d1117;
+}
+
+.btn-primary:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: #0d1117;
+  color: #ffdd57;
+  border: 2px solid #ffdd57;
+}
+
+.btn-secondary:hover {
+  background-color: #ffdd57;
+  color: #0d1117;
+  transform: scale(1.05);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -15px); }
+}
+
+/* Features Section */
+.features {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.features h2 span {
+  color: #ffdd57;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.feature-card {
+  background: #0d1117;
+  color: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card i {
+  color: #ffdd57;
+  margin-bottom: 15px;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+/* CTA Section */
+.cta {
+  background-color: #ffdd57;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0d1117;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  color: #ffdd57;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #0d1117;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    color: #fff;
+  }
+  .feature-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Company Logo" class="logo-img">
+      <h1 class="company-name">🌟UNIQUE RUDRAxGARG DIGITAL MARKETING(URGD) 🌟</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </nav>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="ad-banner">
+  <div class="ad-track">
+    <div class="ad-content">
+      <span>💡 "Dream big, work hard, stay focused." – Bill Gates 💡</span>
+      <span>🌟 "You have to dream before your dreams can come true." – A.P.J. Abdul Kalam 🌟</span>
+      <span>🚀 "Success is not final, failure is not fatal." – Winston Churchill 🚀</span>
+      <span>📈 "Don't watch the clock; do what it does. Keep going." – Sam Levenson 📈</span>
+      <span>🔥 "Innovation distinguishes between a leader and a follower." – Steve Jobs 🔥</span>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>🚀 Grow Your Business Online</h1>
+    <p>Stunning websites, digital marketing & branding to attract real clients.</p>
+    <a href="services.html" class="btn btn-primary">Explore Services</a>
+  </div>
+  <div class="scroll-down"><a href="#features"><i class="fas fa-angle-down"></i></a></div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+  <div class="container">
+    <h2>Why <span>RUDRA</span>?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <i class="fas fa-rocket fa-2x"></i>
+        <h3>Fast Delivery</h3>
+        <p>Websites delivered quickly with high quality & modern design.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-paint-brush fa-2x"></i>
+        <h3>Creative Design</h3>
+        <p>Professional, attractive designs that impress clients instantly.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-mobile-alt fa-2x"></i>
+        <h3>Responsive</h3>
+        <p>Mobile-friendly and fully responsive designs for all devices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Launch Your Website?</h2>
+    <p>Contact us today and get your business online quickly!</p>
+    <a href="contact.html" class="btn btn-secondary">Get Started</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>© 2025 Rudra Digital Marketing Company. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector('nav ul').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

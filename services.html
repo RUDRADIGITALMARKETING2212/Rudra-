@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services - Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Reset & Basic */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body {background:#f4f8fb; color:#222; line-height:1.6;}
+
+/* Header */
+header { width:100%; background:#0d47a1; color:#fff; padding:15px 50px; position:fixed; top:0; z-index:1000; box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+header .logo { font-size:28px; font-weight:800; color:#ffd700;}
+header nav ul { display:flex; list-style:none; gap:20px;}
+header nav ul li a { text-decoration:none; color:#fff; font-weight:500; transition:0.3s;}
+header nav ul li a:hover, nav ul li a.active { color:#ffd700; }
+
+/* Hero Section */
+.hero { height:50vh; background:url('https://source.unsplash.com/1600x900/?website,technology') center/cover no-repeat; display:flex; justify-content:center; align-items:center;}
+.hero h1 { color:#fff; font-size:36px; background:rgba(0,0,0,0.5); padding:20px; border-radius:12px; text-align:center;}
+
+/* Services Section */
+.services { padding:100px 20px; text-align:center;}
+.services h2 { font-size:36px; margin-bottom:40px; color:#0d47a1;}
+.service-grid { display:flex; flex-wrap:wrap; gap:30px; justify-content:center;}
+.service-card { background:#fff; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.1); flex:1; min-width:250px; max-width:300px; transition:transform 0.3s, box-shadow 0.3s;}
+.service-card:hover { transform:translateY(-10px); box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+.service-card i { font-size:40px; color:#ff6b00; margin-bottom:15px;}
+.service-card h3 { font-size:24px; margin-bottom:15px; color:#0d47a1;}
+.service-card p { font-size:16px; color:#555; }
+
+/* Footer */
+footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:50px;}
+footer .social-icons a { color:#fff; margin:0 10px; font-size:18px; transition:0.3s;}
+footer .social-icons a:hover { color:#ffd700; }
+
+/* Responsive */
+@media(max-width:768px){
+  .service-grid { flex-direction:column; align-items:center;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🌟UNIQUE RUDRAxGARG DIGITAL MARKETING(URGD) 🌟</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Our Services</h1>
+</section>
+
+<section class="services">
+  <h2>What We Offer</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Website Design</h3>
+      <p>We create modern, responsive websites that look amazing on any device.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobile Optimization</h3>
+      <p>Your website will be fully optimized for mobile users for better engagement.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-bullhorn"></i>
+      <h3>Digital Marketing</h3>
+      <p>Boost your business with SEO, social media marketing, and online ads.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-paint-brush"></i>
+      <h3>Branding & Graphics</h3>
+      <p>Professional logos, banners, and graphics to strengthen your brand identity.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 My Company. All Rights Reserved.</p>
+  <div class="social-icons">
+    <a href="#">FB</a>
+    <a href="#">IG</a>
+    <a href="#">TW</a>
+  </div>
+</footer>
+
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
