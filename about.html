@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="URGD - Unique RudraxGarg Digital Marketing | Digital solutions, innovative strategies, and marketing growth." />
+  <meta name="keywords" content="URGD, Digital Marketing, SEO, Business Growth, Social Media" />
+  <meta name="author" content="URGD Team" />
   <title>About Us - URGD</title>
+
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     * {
       margin: 0;
@@ -26,6 +32,7 @@
       padding: 15px 0;
       text-align: center;
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      animation: fadeDown 1s ease-in-out;
     }
 
     header h1 {
@@ -56,7 +63,7 @@
       text-align: center;
       background: rgba(255,255,255,0.1);
       border-radius: 15px;
-      margin: 20px auto;
+      margin: 30px auto;
       max-width: 900px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.3);
       animation: fadeIn 1s ease-in-out;
@@ -72,11 +79,6 @@
       font-size: 18px;
       max-width: 750px;
       margin: auto;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(50px);}
-      to {opacity: 1; transform: translateY(0);}
     }
 
     .team {
@@ -96,6 +98,7 @@
       box-shadow: 0 12px 30px rgba(0,0,0,0.4);
       backdrop-filter: blur(10px);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: zoomIn 0.8s ease-in-out;
     }
 
     .card:hover {
@@ -154,6 +157,22 @@
       font-size: 14px;
     }
 
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes zoomIn {
+      from {opacity: 0; transform: scale(0.8);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
     @media (max-width: 768px) {
       header h1 { font-size: 24px; }
       nav a { margin: 0 8px; font-size: 14px; }
@@ -183,29 +202,29 @@
 
   <section id="team" class="team">
     <div class="card" style="border:3px solid gold; box-shadow:0 0 25px gold;">
-      <img src="anand.jpg" alt="Founder">
+      <img src="anand.jpg" alt="Anand Shukla - Founder">
       <h3>Anand Shukla</h3>
       <p>Founder & Director</p>
       <a href="https://wa.me/8467063125" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
 
     <div class="card">
-      <img src="pandey.jpg" alt="Manager">
-      <h3>Anupam pandey</h3>
+      <img src="pandey.jpg" alt="Anupam Pandey - Co-Founder">
+      <h3>Anupam Pandey</h3>
       <p>Co-Founder & Business Manager</p>
       <a href="https://wa.me/9161174816" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
 
     <div class="card">
-      <img src="singh.jpg" alt="Designer">
+      <img src="singh.jpg" alt="Anand Singh - Designer">
       <h3>Anand Singh</h3>
-     <p>Team head</p> 
-     <p>Creative Designer & Business Development Manager (BDM)</p>
+      <p>Team Head</p>
+      <p>Creative Designer & Business Development Manager (BDM)</p>
       <a href="https://wa.me/9452789402" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
 
     <div class="card">
-      <img src="niraj.jpg" alt="Partner">
+      <img src="niraj.jpg" alt="Hardik Niraj - Partner">
       <h3>Hardik Niraj</h3>
       <p>Founder, Sezzerx</p>
       <a href="https://wa.me/9264959117" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -217,4 +236,3 @@
   </footer>
 </body>
 </html>
-
