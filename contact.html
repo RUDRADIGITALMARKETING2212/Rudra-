@@ -1,78 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - UNIQUE RUDRAxGARG DIGITAL MARKETING(URGD)</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Contact - UNIQUE RUDRAxGARG DIGITAL MARKETING (URGD)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* Reset */
+/* Global */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f4f8fb;color:#222;line-height:1.6;}
+body{background:#f7faff;color:#222;line-height:1.6;}
 a{text-decoration:none;color:inherit;}
 
 /* Header */
-header{width:100%;background:#0d47a1;color:#fff;padding:15px 20px;position:fixed;top:0;z-index:1000;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
-header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo-img{width:80px;height:auto;border-radius:10px;}
-.company-name{font-size:18px;font-weight:700;background:linear-gradient(90deg,#ff6b00,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-nav ul{display:flex;list-style:none;gap:10px;}
-nav ul li a{color:#fff;font-weight:500;transition:0.3s;font-size:16px;}
-nav ul li a:hover,nav ul li a.active{color:#ffd700;}
-.menu-toggle{display:none;font-size:24px;cursor:pointer;color:#fff;}
+header{
+  width:100%;
+  background:#0d47a1;
+  color:#fff;
+  padding:15px 20px;
+  position:fixed;
+  top:0;
+  z-index:1000;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+header .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo-img{
+  width:70px;height:70px;
+  border-radius:50%;
+  border:3px solid #fff;
+  animation:rotateLogo 6s linear infinite;
+}
+@keyframes rotateLogo{
+  0%{transform:rotate(0);}
+  100%{transform:rotate(360deg);}
+}
+.company-name{
+  font-size:18px;
+  font-weight:700;
+  background:linear-gradient(90deg,#ff6b00,#ffd700,#ff6b00);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:18px;
+}
+nav ul li a{
+  color:#fff;
+  font-weight:600;
+  font-size:16px;
+  transition:0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active{color:#ffd700;}
+.menu-toggle{display:none;font-size:26px;cursor:pointer;color:#fff;}
 
-/* Advertisement Banner */
-.ad-banner{width:100%;background:#ff6b00;overflow:hidden;white-space:nowrap;padding:10px 0;}
-.ad-content{display:inline-block;animation:scroll-left 20s linear infinite;}
-.ad-content span{display:inline-block;color:#fff;font-weight:600;margin-right:50px;font-size:14px;}
-@keyframes scroll-left{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+/* Banner */
+.ad-banner{
+  width:100%;
+  background:#ff6b00;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:10px 0;
+  margin-top:85px;
+}
+.ad-content{
+  display:inline-block;
+  animation:scroll-left 18s linear infinite;
+}
+.ad-content span{
+  display:inline-block;
+  color:#fff;
+  font-weight:600;
+  margin-right:60px;
+  font-size:15px;
+}
+@keyframes scroll-left{
+  0%{transform:translateX(100%);}
+  100%{transform:translateX(-100%);}
+}
 
 /* Contact Section */
-.contact-section{padding:140px 20px 60px;background:#e3f2fd;}
-.contact-container{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;align-items:flex-start;}
+.contact-section{
+  padding:60px 20px;
+  background:#e3f2fd;
+}
+.contact-container{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:flex-start;
+}
 
-/* Contact Forms */
-.contact-form{background:#fff;padding:20px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);flex:1;min-width:260px;max-width:480px;transition:transform 0.3s,box-shadow 0.3s;}
-.contact-form:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,0.2);}
-.contact-form h2{text-align:center;font-size:20px;margin-bottom:15px;color:#0d47a1;}
-.contact-form input,.contact-form textarea{width:100%;padding:10px;margin-bottom:12px;border:1px solid #ccc;border-radius:8px;font-size:14px;transition:border-color 0.3s;}
-.contact-form input:focus,.contact-form textarea:focus{border-color:#ff6b00;outline:none;}
-.contact-form button{width:100%;background:#ff6b00;color:#fff;padding:12px;border:none;border-radius:8px;font-size:16px;cursor:pointer;transition:0.3s;}
-.contact-form button:hover{background:#ff4500;}
+/* Creative Forms */
+.contact-form{
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.12);
+  flex:1;
+  min-width:280px;
+  max-width:450px;
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.contact-form:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.18);
+}
+.contact-form h2{
+  text-align:center;
+  font-size:20px;
+  margin-bottom:20px;
+  color:#0d47a1;
+}
 
-/* Founder / Manager Info */
-.team-section{max-width:1200px;margin:50px auto;text-align:center;padding:0 10px;}
-.team-card{background:#fff;padding:20px;margin:15px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);display:inline-block;min-width:220px;transition:transform 0.3s;width:100%;max-width:300px;}
+/* Input group with icons */
+.input-group{
+  position:relative;
+  margin-bottom:18px;
+}
+.input-group i{
+  position:absolute;
+  top:50%;
+  left:12px;
+  transform:translateY(-50%);
+  color:#ff6b00;
+  font-size:16px;
+}
+.input-group input,
+.input-group textarea{
+  width:100%;
+  padding:12px 12px 12px 38px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:14px;
+  background:rgba(255,255,255,0.9);
+  transition:all 0.3s;
+}
+.input-group input:focus,
+.input-group textarea:focus{
+  border-color:#ff6b00;
+  box-shadow:0 0 6px rgba(255,107,0,0.3);
+  transform:scale(1.02);
+  outline:none;
+}
+
+/* Buttons */
+.contact-form button{
+  width:100%;
+  background:linear-gradient(135deg,#ff6b00,#ff9500);
+  color:#fff;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.4s;
+}
+.contact-form button:hover{
+  background:linear-gradient(135deg,#ff9500,#ff6b00);
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(255,107,0,0.3);
+}
+
+/* Team Section */
+.team-section{
+  max-width:1200px;
+  margin:50px auto;
+  text-align:center;
+  padding:0 15px;
+}
+.team-card{
+  background:#fff;
+  padding:20px;
+  margin:15px;
+  border-radius:14px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.1);
+  display:inline-block;
+  min-width:220px;
+  transition:transform 0.3s;
+  width:100%;
+  max-width:300px;
+}
 .team-card:hover{transform:translateY(-5px);}
 .team-card h3{color:#0d47a1;margin-bottom:10px;font-size:18px;}
 .team-card p{font-weight:600;color:#ff6b00;font-size:14px;}
 
 /* Footer */
-footer{background:#0d47a1;color:#fff;padding:20px;text-align:center;margin-top:40px;font-size:14px;}
+footer{
+  background:#0d47a1;
+  color:#fff;
+  padding:22px;
+  text-align:center;
+  margin-top:40px;
+  font-size:14px;
+}
 
 /* Responsive */
-@media(max-width:1024px){
-  header .container{flex-direction:column;gap:10px;}
-  nav ul{flex-direction:column;gap:10px;}
-}
-
 @media(max-width:768px){
-  .contact-container{flex-direction:column;align-items:center;}
-  header .container{flex-direction:column;gap:10px;}
-  nav ul{display:none;width:100%;flex-direction:column;gap:10px;background:#0d47a1;}
+  nav ul{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    gap:12px;
+    background:#0d47a1;
+    padding:10px 0;
+  }
   nav ul.show{display:flex;}
   .menu-toggle{display:block;}
-}
-
-@media(max-width:480px){
-  .company-name{font-size:16px;text-align:center;}
-  .ad-content span{font-size:12px;margin-right:30px;}
-  .contact-form h2{font-size:18px;}
-  .contact-form input,.contact-form textarea{font-size:13px;padding:8px;}
-  .team-card h3{font-size:16px;}
-  .team-card p{font-size:13px;}
+  .contact-container{flex-direction:column;align-items:center;}
 }
 </style>
 </head>
@@ -82,7 +232,7 @@ footer{background:#0d47a1;color:#fff;padding:20px;text-align:center;margin-top:4
   <div class="container">
     <div class="logo">
       <img src="logo.png" class="logo-img" alt="Logo">
-      <span class="company-name">🌟UNIQUE RUDRAxGARG DIGITAL MARKETING(URGD) 🌟</span>
+      <span class="company-name">🌟 UNIQUE RUDRAxGARG DIGITAL MARKETING (URGD) 🌟</span>
     </div>
     <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
     <nav>
@@ -96,9 +246,9 @@ footer{background:#0d47a1;color:#fff;padding:20px;text-align:center;margin-top:4
 
 <div class="ad-banner">
   <div class="ad-content">
-    <span>Get your website designed today!</span>
-    <span>Boost your business online!</span>
-    <span>Contact us for amazing offers!</span>
+    <span>🚀 Get your website designed today!</span>
+    <span>📈 Boost your business online!</span>
+    <span>🎯 Contact us for amazing offers!</span>
   </div>
 </div>
 
@@ -107,20 +257,38 @@ footer{background:#0d47a1;color:#fff;padding:20px;text-align:center;margin-top:4
 
     <!-- Form 1 -->
     <form class="contact-form" onsubmit="sendWhatsApp1(event)">
-      <h2>REFERRAL PROGRAM</h2>
-      <input type="text" id="name1" placeholder="Your Name" required>
-      <input type="email" id="email1" placeholder="Your Email" required>
-      <textarea id="message1" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">CONTACT TO DIRECTOR</button>
+      <h2>💡 REFERRAL PROGRAM</h2>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name1" placeholder="Your Name" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email1" placeholder="Your Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-comment"></i>
+        <textarea id="message1" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit">CONTACT DIRECTOR</button>
     </form>
 
     <!-- Form 2 -->
     <form class="contact-form" onsubmit="sendWhatsApp2(event)">
-      <h2>WEB DEVELOPMENT</h2>
-      <input type="text" id="name2" placeholder="Your Name" required>
-      <input type="email" id="email2" placeholder="Your Email" required>
-      <textarea id="message2" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">CONTACT TO MANAGER/team head</button>
+      <h2>🌐 WEB DEVELOPMENT</h2>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name2" placeholder="Your Name" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email2" placeholder="Your Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-comment"></i>
+        <textarea id="message2" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit">CONTACT MANAGER</button>
     </form>
 
   </div>
@@ -138,14 +306,14 @@ footer{background:#0d47a1;color:#fff;padding:20px;text-align:center;margin-top:4
     <p>📞 9161174816</p>
   </div>
    <div class="team-card">
-    <h3>team head / MANAGER</h3>
+    <h3>Team head/ bussiness head</h3>
     <p>Anand singh</p>
-    <p>📞 +91 94527 89402</p>
+    <p>📞+91 94527 89402</p>
   </div>
 </section>
 
 <footer>
-  © 2025 UNIQUE RUDRAxGARG DIGITAL MARKETING(URGD). All Rights Reserved.
+  © 2025 UNIQUE RUDRAxGARG DIGITAL MARKETING (URGD). All Rights Reserved.
 </footer>
 
 <script>
@@ -177,6 +345,3 @@ function toggleMenu(){
 
 </body>
 </html>
-
-
-
