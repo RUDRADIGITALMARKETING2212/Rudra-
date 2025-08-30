@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>UNIQUE RUDRAxGARG — Digital Marketing</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --bg1: #050511;
       --glass: rgba(255,255,255,0.06);
       --accentA: #ff6ec7;
@@ -17,330 +17,298 @@
       --accentC: #00ffd0;
       --glass-border: rgba(255,255,255,0.06);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: 'Poppins', system-ui, sans-serif;
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; width: 100%; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
       background: radial-gradient(ellipse at 10% 10%, rgba(107,91,255,0.06), transparent 6%),
                   radial-gradient(ellipse at 90% 90%, rgba(255,110,199,0.04), transparent 8%),
                   var(--bg1);
-      color:#eaf0ff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      overflow:hidden;
+      color: #eaf0ff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Particle canvas covers background */
-    #bg-canvas{
-      position:fixed;
-      inset:0;
-      z-index:0;
+    /* Background Canvas */
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
     }
 
-    /* Page container */
+    /* Page Container */
     .page {
-      position:relative;
-      z-index:5;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
+      position: relative;
+      z-index: 5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
-    /* Hero card (glass) */
+    /* Hero Section */
     .hero {
-      width:100%;
-      max-width:1100px;
-      border-radius:18px;
-      padding:38px;
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 18px;
+      padding: 32px;
       background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
       backdrop-filter: blur(8px) saturate(120%);
       border: 1px solid var(--glass-border);
       box-shadow: 0 20px 60px rgba(3,6,20,0.7);
-      display:grid;
+      display: grid;
       grid-template-columns: 420px 1fr;
-      gap:28px;
-      align-items:center;
-      position:relative;
-      overflow:visible;
+      gap: 28px;
+      align-items: center;
+      position: relative;
+      overflow: visible;
     }
 
-    /* Rotating ring with logo */
+    /* Rotating Ring */
     .ring {
-      width:340px;
-      height:340px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin:auto;
-      position:relative;
-      --ring-border: 12px;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      position: relative;
     }
-    .ring::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      border-radius:50%;
-      padding:var(--ring-border);
-      background:conic-gradient(from 120deg, var(--accentA), var(--accentB), var(--accentC), var(--accentA));
+
+    .ring::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      padding: 12px;
+      background: conic-gradient(from 120deg, var(--accentA), var(--accentB), var(--accentC), var(--accentA));
       -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 24px), black calc(100% - 24px));
       mask: radial-gradient(farthest-side, transparent calc(100% - 24px), black calc(100% - 24px));
       filter: blur(10px) saturate(120%);
-      animation:spin 9s linear infinite;
-      transform-origin:center;
-      z-index:1;
+      animation: spin 9s linear infinite;
+      transform-origin: center;
+      z-index: 1;
     }
-    .ring::after{
-      content:"";
-      position:absolute;
-      inset:6%;
-      border-radius:50%;
+
+    .ring::after {
+      content: "";
+      position: absolute;
+      inset: 6%;
+      border-radius: 50%;
       box-shadow: 0 0 40px rgba(107,91,255,0.14), inset 0 0 30px rgba(0,255,208,0.06);
-      z-index:2;
-      pointer-events:none;
+      z-index: 2;
     }
 
-    @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-    .logo-inner{
-      position:relative;
-      width:240px;
-      height:240px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(255,255,255,0.02));
-      z-index:3;
+    /* Logo Inner */
+    .logo-inner {
+      position: relative;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(255,255,255,0.02));
       box-shadow: 0 12px 40px rgba(2,6,23,0.6);
-      transform:translateZ(0);
-      transition:transform .45s cubic-bezier(.2,.9,.2,1);
+      z-index: 3;
+      transition: transform 0.45s ease;
     }
-    .logo-inner img{
-      width:84%;
-      height:84%;
-      object-fit:contain;
-      border-radius:50%;
-      display:block;
-      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.6));
-      background:transparent;
-    }
-    .logo-inner:hover{ transform:translateY(-8px) rotate(-2deg) }
 
-    /* Right content */
+    .logo-inner img {
+      width: 84%;
+      height: 84%;
+      object-fit: contain;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .logo-inner:hover {
+      transform: translateY(-8px) rotate(-2deg);
+    }
+
+    /* Right Content */
     .content {
-      padding:6px 6px 6px 0;
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-      align-items:flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
     }
 
-    .brand-top {
-      display:flex;
-      gap:12px;
-      align-items:center;
-      width:100%;
-      justify-content:flex-end;
-    }
     .badge {
       font-family: 'Orbitron', sans-serif;
-      font-weight:700;
-      color:transparent;
+      font-weight: 700;
+      color: transparent;
       background: linear-gradient(90deg, var(--accentB), var(--accentA));
-      -webkit-background-clip:text;
-      background-clip:text;
-      -webkit-text-fill-color:transparent;
-      letter-spacing:2px;
-      font-size:14px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.04);
+      -webkit-background-clip: text;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.04);
       backdrop-filter: blur(4px);
     }
 
     .title {
       font-family: 'Orbitron', sans-serif;
-      font-size:38px;
-      letter-spacing:2px;
-      margin:6px 0 0 0;
-      color:#ffffff;
-      text-shadow: 0 6px 30px rgba(0,0,0,0.6);
+      font-size: 38px;
+      letter-spacing: 2px;
+      margin: 6px 0 0 0;
+      color: #fff;
     }
 
     .sub {
-      font-size:16px;
-      color:rgba(234,240,255,0.85);
-      margin-top:6px;
-      max-width:680px;
-      line-height:1.5;
-      opacity:0.95;
+      font-size: 16px;
+      color: rgba(234,240,255,0.85);
+      margin-top: 6px;
+      max-width: 680px;
+      line-height: 1.5;
     }
 
-    /* Typing subtitle */
+    /* Typing Effect */
     .typing {
-      margin-top:12px;
-      font-weight:600;
-      color:var(--accentC);
-      font-size:18px;
-      display:flex;
-      gap:8px;
-      align-items:center;
+      margin-top: 12px;
+      font-weight: 600;
+      color: var(--accentC);
+      font-size: 18px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
     }
-    .typing .cursor{ width:2px;height:22px;background:#fff;border-radius:2px; animation:blink 1s steps(2) infinite; opacity:0.9 }
-    @keyframes blink{50%{opacity:0}}
 
-    /* Corner name placements (decorative but selectable) */
-    .corner-name{
-      position:absolute;
-      z-index:6;
-      font-weight:700;
-      pointer-events:auto;
-      user-select:text;
-      text-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    .typing .cursor {
+      width: 2px;
+      height: 22px;
+      background: #fff;
+      animation: blink 1s steps(2) infinite;
     }
-    .corner-top-left{ top:18px; left:28px; font-size:20px; color:#ffd9f0; transform:rotate(-2deg); font-family: 'Great Vibes', cursive; }
-    .corner-top-right{ top:18px; right:28px; font-size:16px; color:var(--accentC); font-family: 'Orbitron', sans-serif; letter-spacing:1px }
-    .corner-bottom-left{ bottom:18px; left:28px; font-size:14px; color:#bcd4ff; font-family: 'Poppins', sans-serif; }
-    .corner-bottom-right{ bottom:18px; right:28px; font-size:16px; color:#fff0c6; font-family: Georgia, serif; font-style:italic; }
 
-    /* Buttons */
-    .nav {
-      margin-top:18px;
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
+    @keyframes blink {
+      50% { opacity: 0; }
     }
-    
-    /* CTA (improved GO TO WEB button) */
-    .cta-wrap { margin-top:18px; display:flex; flex-direction:column; gap:8px; align-items:flex-start; }
-    .cta-btn{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      padding:14px 28px;
-      border-radius:999px;
-      font-weight:800;
-      font-size:18px;
-      color:#fff;
-      text-decoration:none;
+
+    /* CTA Button */
+    .cta-wrap { margin-top: 18px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
       background: linear-gradient(90deg, var(--accentB), var(--accentA));
-      box-shadow: 0 12px 40px rgba(107,91,255,0.20), 0 4px 18px rgba(107,91,255,0.12);
+      box-shadow: 0 12px 40px rgba(107,91,255,0.20);
       border: none;
-      transition: transform .18s cubic-bezier(.2,.9,.2,1), box-shadow .18s;
-      cursor:pointer;
-      -webkit-tap-highlight-color: transparent;
-      animation:ctaPulse 3s infinite;
-    }
-    .cta-btn:hover{ transform:translateY(-6px) scale(1.02); box-shadow: 0 30px 80px rgba(107,91,255,0.28); }
-    .cta-sub{ font-size:13px; color:rgba(234,240,255,0.8); margin-left:6px; }
-
-    @keyframes ctaPulse{
-      0%{ box-shadow: 0 10px 30px rgba(107,91,255,0.18); transform:translateY(0) }
-      50%{ box-shadow: 0 28px 70px rgba(107,91,255,0.24); transform:translateY(-4px) }
-      100%{ box-shadow: 0 10px 30px rgba(107,91,255,0.18); transform:translateY(0) }
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    /* Small styles for fancy name chips */
-    .chips { display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; }
+    .cta-btn:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 30px 80px rgba(107,91,255,0.28);
+    }
+
+    /* Chips */
+    .chips { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
     .chip {
-      padding:8px 12px; border-radius:999px; font-weight:700; font-size:13px;
-      background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03);
-      cursor:pointer; transition:transform .18s ease;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.03);
+      cursor: pointer;
+      transition: transform 0.18s ease;
     }
-    .chip:hover{ transform:translateY(-6px) }
+    .chip:hover { transform: translateY(-6px); }
 
-    /* Responsive */
-    @media (max-width:980px){
-      .hero{ grid-template-columns: 1fr; padding:28px; gap:18px }
-      .ring{ display:flex; justify-content:center; margin-bottom:0 }
-      .logo-inner{ width:200px; height:200px }
-      .title{ font-size:30px }
+    /* Responsive Design */
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; text-align: center; padding: 24px; }
+      .content { align-items: center; }
+      .ring { width: 260px; height: 260px; margin: 0 auto; }
+      .logo-inner { width: 200px; height: 200px; }
+      .title { font-size: 28px; }
+      .sub { font-size: 14px; }
+      .cta-wrap { align-items: center; }
+      .cta-btn { width: 100%; justify-content: center; font-size: 16px; padding: 12px 20px; }
     }
-    @media (max-width:560px){
-      .logo-inner{ width:160px; height:160px }
-      .ring{ width:260px; height:260px }
-      .title{ font-size:22px }
-      .corner-top-left, .corner-top-right, .corner-bottom-left, .corner-bottom-right { display:none }
+
+    @media (max-width: 560px) {
+      .ring { width: 220px; height: 220px; }
+      .logo-inner { width: 160px; height: 160px; }
+      .title { font-size: 22px; }
+      .sub { font-size: 13px; padding: 0 10px; }
+      .chips { justify-content: center; }
+      .chip { font-size: 12px; padding: 6px 10px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Particle background -->
+  <!-- Particle Background -->
   <canvas id="bg-canvas"></canvas>
 
   <div class="page">
     <div class="hero">
 
-      <!-- Left: Ring + Logo -->
+      <!-- Left Logo Ring -->
       <div class="ring" aria-hidden="true">
         <div class="logo-inner" title="UNIQUE RUDRAXGARG">
-          <!-- Put your logo filename here (same folder) -->
           <img src="logo.png" alt="URxG Logo">
         </div>
       </div>
 
-      <!-- Right: Content -->
+      <!-- Right Content -->
       <div class="content">
-        <div style="width:100%;display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div class="badge">UNIQUE RUDRAXGARG</div>
-          </div>
-          <div style="opacity:0.9;font-size:13px;color:rgba(234,240,255,0.75)">Digital Marketing • Branding • Growth</div>
-        </div>
-
+        <div class="badge">꧁༺ 𝓤𝓝𝓘𝓠𝓤𝓔 𝓡𝓤𝓓𝓡𝓐✘𝓖𝓐𝓡𝓖 ༻꧂</div>
         <h1 class="title">UNIQUE RUDRA<span style="color:var(--accentC)">✘</span>GARG</h1>
+        <p class="sub">We craft bold digital brands, scalable marketing systems, and memorable campaigns that grow businesses.</p>
 
-        <p class="sub">We craft bold digital brands, scalable marketing systems, and memorable campaigns that grow businesses. From creative strategy to full-funnel execution — we make brands shine.</p>
-
-        <div class="typing" aria-hidden="false">
+        <div class="typing">
           <div id="typed-text">Digital Marketing • Branding • URGD</div>
           <div class="cursor"></div>
         </div>
 
-         <!-- Improved CTA -->
+        <!-- CTA -->
         <div class="cta-wrap">
-          <!-- opens in new tab -->
-          <a class="cta-btn" href="first.html" target="_blank" rel="noopener noreferrer" aria-label="Visit UNIQUE RUDRAXGARG website">
+          <a class="cta-btn" href="index.html" target="_blank">
             🛠️ GO TO WEB — Visit Site
           </a>
-          <div class="cta-sub">Opens in a new tab • Click to visit our full website</div>
         </div>
 
-        <div class="chips" aria-hidden="true">
+        <!-- Chips -->
+        <div class="chips">
           <div class="chip" onclick="copyName('꧁༺ 𝓤𝓝𝓘𝓠𝓤𝓔 𝓡𝓤𝓓𝓡𝓐✘𝓖𝓐𝓡𝓖 ༻꧂')">Ornamental</div>
           <div class="chip" onclick="copyName('⧫ 𝕌ℕ𝕀ℚ𝕌𝔼 ℝ𝕌𝔻ℝ𝔸✘𝔾𝔸ℝ𝔾 ⧫')">Neon</div>
           <div class="chip" onclick="copyName('【ＵＮＩＱＵＥ　ＲＵＤＲＡ✘ＧＡＲＧ】')">Fullwidth</div>
           <div class="chip" onclick="copyName('✦ 𝑼𝑵𝑰𝑸𝑼𝑬 𝑹𝑼𝑫𝑹𝑨✘𝑮𝑨𝑹𝑮 ✦')">Serif</div>
         </div>
-
       </div>
-
-      <!-- Corner names (decorative & copyable) -->
-      <div class="corner-name corner-top-left">꧁༺ 𝓤𝓝𝓘𝓠𝓤𝓔 𝓡𝓤𝓓𝓡𝓐✘𝓖𝓐𝓡𝓖 ༻꧂</div>
-      <div class="corner-name corner-top-right">⧫ 𝕌ℕ𝕀𝕼𝕌𝔼 ℝ𝕌𝔻ℝ𝔸✘𝔾𝔸ℝ𝔾 ⧫</div>
-      <div class="corner-name corner-bottom-left">【ＵＮＩＱＵＥ　ＲＵＤＲＡ✘ＧＡＲＧ】</div>
-      <div class="corner-name corner-bottom-right">✦ 𝑼𝑵𝑰𝑸𝑼𝑬 𝑹𝑼𝑫𝑹𝑨✘𝑮𝑨𝑹𝑮 ✦</div>
-
     </div>
   </div>
 
   <script>
-    /* -------------------------
-       Simple typing effect
-       ------------------------- */
+    // Typing Effect
     (function(){
       const phrases = [
         'Digital Marketing • Branding • Innovation',
         'Growth Campaigns • Social Media • Performance',
-        'ANAND SHUKLA . FOUNDER/DIRECTOR',
-        'meet our team',
-        'ANAND SINGH .TEAM HEAD/MANAGER',
-        'anupam pandey.co-founder',
+        'ANAND SHUKLA • FOUNDER/DIRECTOR',
+        'ANAND SINGH • TEAM HEAD',
+        'ANUPAM PANDEY • CO-FOUNDER'
       ];
       const el = document.getElementById('typed-text');
       let p = 0, i = 0, forward = true;
@@ -349,20 +317,18 @@
         const text = phrases[p];
         if(forward){
           i++;
-          if(i >= text.length){ forward = false; setTimeout(tick,800); return; }
+          if(i >= text.length){ forward = false; setTimeout(tick, 1000); return; }
         } else {
           i--;
-          if(i <= 0){ forward = true; p = (p+1) % phrases.length; setTimeout(tick,300); return; }
+          if(i <= 0){ forward = true; p = (p+1) % phrases.length; setTimeout(tick, 300); return; }
         }
         el.textContent = text.slice(0,i);
-        setTimeout(tick, 40 + Math.random()*30);
+        setTimeout(tick, 50);
       }
       tick();
     })();
 
-    /* -------------------------
-       Copy name helper (chips)
-       ------------------------- */
+    // Copy Name Function
     function copyName(text){
       navigator.clipboard?.writeText(text).then(()=>{
         alert('Copied: ' + text);
@@ -371,10 +337,7 @@
       });
     }
 
-    /* -------------------------
-       Particles background (canvas)
-       lightweight and subtle
-       ------------------------- */
+    // Particle Background
     (function(){
       const canvas = document.getElementById('bg-canvas');
       const ctx = canvas.getContext('2d');
@@ -397,7 +360,6 @@
 
       function draw(){
         ctx.clearRect(0,0,w,h);
-        // subtle radial vignette
         const g = ctx.createRadialGradient(w*0.2,h*0.2,0,w/2,h/2,Math.max(w,h));
         g.addColorStop(0,'rgba(0,0,0,0)');
         g.addColorStop(1,'rgba(2,4,12,0.6)');
@@ -411,28 +373,10 @@
           if(p.x > w+10) p.x = -10;
           if(p.y < -10) p.y = h+10;
           if(p.y > h+10) p.y = -10;
-
           ctx.beginPath();
           ctx.fillStyle = 'rgba(180,210,255,'+p.alpha+')';
           ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
           ctx.fill();
-        }
-
-        // subtle connecting lines
-        for(let a=0;a<particles.length;a++){
-          for(let b=a+1;b<particles.length;b++){
-            const p1 = particles[a], p2 = particles[b];
-            const dx = p1.x - p2.x, dy = p1.y - p2.y;
-            const d2 = dx*dx + dy*dy;
-            if(d2 < 16000){
-              ctx.strokeStyle = 'rgba(120,150,255,'+ (0.02 + (16000-d2)/16000*0.06) +')';
-              ctx.lineWidth = 1;
-              ctx.beginPath();
-              ctx.moveTo(p1.x,p1.y);
-              ctx.lineTo(p2.x,p2.y);
-              ctx.stroke();
-            }
-          }
         }
 
         requestAnimationFrame(draw);
@@ -442,5 +386,3 @@
   </script>
 </body>
 </html>
-
-
