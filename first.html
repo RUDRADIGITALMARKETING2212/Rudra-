@@ -1,280 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UNIQUE RUDRAxGARG DIGITAL MARKETING (URGD)</title>
-
-  <!-- Primary SEO -->
-  <meta name="description" content="URGD — We design stunning websites and drive growth with SEO, branding, and digital marketing. Fast delivery. Premium quality. Real results." />
-  <meta name="keywords" content="URGD, Rudra Digital Marketing, website design, SEO, branding, social media marketing, India" />
+  <title>URGD — UNIQUE RUDRAxGARG DIGITAL MARKETING</title>
+  <meta name="description" content="URGD — We design stunning websites and drive growth with SEO, branding, and digital marketing." />
   <meta name="author" content="URGD" />
-  <link rel="icon" href="logo.png" type="image/png" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="URGD — Digital Marketing & Web Design" />
-  <meta property="og:description" content="Launch faster. Rank higher. Convert better. URGD builds brands that win online." />
-  <meta property="og:image" content="og-cover.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://your-domain.example/" />
-  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-S5ZC9o1h1B0tUXTnYxM7w2qXlQJr3oW7Q+0wq9Yz6i6pJQk7wJQy6G7m5k8z0K1f0a9BY6d6qY5e9J1WnN3QWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Structured Data (Local Business) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "UNIQUE RUDRAxGARG DIGITAL MARKETING (URGD)",
-      "url": "https://your-domain.example/",
-      "logo": "https://your-domain.example/logo.png",
-      "sameAs": [
-        "https://facebook.com/yourpage",
-        "https://instagram.com/yourpage",
-        "https://www.linkedin.com/company/yourpage",
-        "https://x.com/yourpage"
-      ]
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    /* Reset */
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background:#0b0e14; color:#e8eefc; line-height:1.6; }
-    img { max-width: 100%; display:block; }
-    a { color: inherit; text-decoration: none; }
+    /* ========== MOBILE-FIRST BASE ========== */
+    :root{
+      --bg:#0b0e14;
+      --card:rgba(255,255,255,.04);
+      --muted:#9fb0d3;
+      --accent:#ffd54a;
+      --glass-border: rgba(255,255,255,.06);
+      --ease: cubic-bezier(.2,.9,.2,1);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#e8eefc;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      -webkit-tap-highlight-color: transparent;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;height:auto}
+    .container{width:min(1100px,94%);margin:0 auto}
 
-    /* Container */
-    .container { width:min(1200px, 92%); margin:auto; }
+    /* Top strip */
+    .top-strip{background:#0f1724;color:var(--muted);font-size:.88rem}
+    .top-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:.45rem 0}
+    .badge-pill{background:#22c55e;color:#06121d;padding:.18rem .6rem;border-radius:999px;font-weight:700;font-size:.78rem}
 
-    /* Top contact strip */
-    .top-strip { background:#111827; color:#cbd5e1; font-size:.9rem; }
-    .top-strip .row { display:flex; justify-content:space-between; align-items:center; padding:.5rem 0; gap:10px; }
-    .top-strip i { margin-right:.4rem; }
-    .top-strip .cta-mini { display:flex; gap:12px; align-items:center; }
-    .badge-pill { background:#22c55e; color:#06121d; font-weight:700; padding:.25rem .6rem; border-radius:999px; font-size:.75rem; }
+    /* HEADER */
+    header{position:sticky;top:0;z-index:1200}
+    .navwrap{
+      background:linear-gradient(120deg,#0f172a,#0b1220 40%,#0f172a);
+      border-bottom:1px solid rgba(255,255,255,.02);
+      backdrop-filter: blur(6px);
+      padding:12px 0;
+      transition:box-shadow .25s var(--ease);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{width:52px;height:52px;border-radius:12px;border:2px solid rgba(255,255,255,.08);object-fit:cover;background:#071018}
+    .brand .name{font-weight:800;font-size:1rem;letter-spacing:.3px}
+    .brand .name span{color:var(--accent);text-shadow:0 2px 10px rgba(255,213,74,.18)}
 
-    /* Header */
-    header { position:sticky; top:0; z-index:1000; box-shadow:0 8px 30px rgba(0,0,0,.35); }
-    .navwrap { background: linear-gradient(120deg, #0f172a, #0b1220 40%, #0f172a); background-size:400% 400%; animation: gradMove 12s ease infinite; }
-    @keyframes gradMove { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-    .nav { display:flex; align-items:center; justify-content:space-between; padding:16px 0; }
-    .brand { display:flex; align-items:center; gap:12px; }
-    .brand img { width:56px; height:56px; border-radius:14px; border:2px solid rgba(255,255,255,.2); object-fit:cover; background:#0b1220; }
-    .brand .name { font-weight:800; font-size:1.1rem; letter-spacing:.3px; }
-    .brand .name span { color:#ffd54a; text-shadow:0 2px 10px rgba(255,213,74,.35); }
+    /* Nav links (mobile: hidden behind menu) */
+    nav{position:relative}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{font-weight:600;opacity:.95;position:relative;padding:.2rem .2rem;border-radius:8px}
+    .nav-links a:focus{outline:2px solid rgba(255,213,74,.12)}
+    .nav-links a.active::after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:3px;background:var(--accent);border-radius:3px}
 
-    nav ul { list-style:none; display:flex; gap:26px; }
-    nav ul a { font-weight:600; opacity:.9; position:relative; }
-    nav ul a::after { content:""; position:absolute; left:0; bottom:-6px; width:0; height:3px; background:#ffd54a; border-radius:2px; transition:.3s; }
-    nav ul a:hover::after, nav ul a.active::after { width:100%; }
+    .menu-toggle{
+      display:flex;align-items:center;justify-content:center;padding:8px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.03);
+      font-size:1.1rem;color:inherit
+    }
 
-    .menu-toggle { display:none; font-size:1.6rem; padding:8px 10px; border-radius:10px; background:rgba(255,255,255,.06); }
+    /* mobile menu panel */
+    .mobile-panel{
+      display:none;
+      position:fixed;
+      top:72px;
+      right:12px;
+      width:min(92vw,340px);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid var(--glass-border);
+      border-radius:14px;
+      padding:14px;
+      box-shadow:0 18px 40px rgba(0,0,0,.6);
+      z-index:1300;
+      flex-direction:column;
+      gap:10px;
+    }
+    .mobile-panel a{padding:10px;border-radius:10px}
+    .mobile-backdrop{display:none;position:fixed;inset:0;background:rgba(3,6,12,.45);backdrop-filter:blur(4px);z-index:1200}
 
-    /* Banner (Quotes Ticker) */
-    .ad-banner{ background:#ffd54a; color:#0b0e14; overflow:hidden; white-space:nowrap; }
-    .ad-track{ display:inline-block; padding-block:10px; animation:scroll 25s linear infinite; }
-    .ad-content span{ display:inline-block; margin-right:60px; font-weight:700; }
-    @keyframes scroll{ 0%{transform:translateX(100%)} 100%{transform:translateX(-100%)} }
-
-    /* Hero */
-    .hero { position:relative; min-height:72vh; display:grid; place-items:center; text-align:center; isolation:isolate; }
-    .hero::before { content:""; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; filter:brightness(.55) saturate(1.1); z-index:-2; }
-    .hero::after { content:""; position:absolute; inset:0; background:radial-gradient(60% 60% at 50% 40%, rgba(255,213,74,.20), transparent 60%), linear-gradient(180deg, rgba(11,14,20,0) 0%, rgba(11,14,20,.9) 85%); z-index:-1; }
-    .hero h1 { font-size:clamp(2rem, 4vw, 3.4rem); margin:0 0 .6rem; font-weight:800; letter-spacing:.3px; }
-    .hero p { font-size:clamp(1rem, 2vw, 1.25rem); opacity:.95; max-width:800px; margin:auto; }
-
-    .cta-row { margin-top:22px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-    .btn { display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:12px; font-weight:700; border:2px solid transparent; transition:.25s; }
-    .btn-primary{ background:#ffd54a; color:#0b0e14; }
-    .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 25px rgba(255,213,74,.35); }
-    .btn-ghost{ background:transparent; border-color:rgba(255,255,255,.2); }
-    .btn-ghost:hover{ background:rgba(255,255,255,.06); }
-
-    .scroll-down{ position:absolute; bottom:22px; left:50%; transform:translateX(-50%); font-size:1.8rem; animation:bounce 2s infinite; }
-    @keyframes bounce{ 0%,100%{ transform:translate(-50%, 0) } 50%{ transform:translate(-50%, -12px) } }
+    /* HERO */
+    .hero{min-height:62vh;display:grid;place-items:center;text-align:center;position:relative;padding:40px 0}
+    .hero::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;filter:brightness(.5) saturate(1.05);z-index:-2}
+    .hero::after{content:'';position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 40%, rgba(255,213,74,.16), transparent 60%), linear-gradient(180deg, rgba(11,14,20,0) 0%, rgba(11,14,20,.85) 85%);z-index:-1}
+    .hero h1{font-size:clamp(1.4rem,4.2vw,2.4rem);margin:0;font-weight:800}
+    .hero p{font-size:clamp(.95rem,2.2vw,1.05rem);max-width:760px;margin:.6rem auto;color:rgba(232,238,252,.95)}
+    .cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;font-weight:700;border:2px solid transparent;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#071018}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.06)}
+    .scroll-down{position:absolute;left:50%;transform:translateX(-50%);bottom:16px;font-size:1.6rem;opacity:.95}
 
     /* Sections */
-    section { padding:72px 0; }
-    .section-title { text-align:center; margin-bottom:40px; }
-    .kicker { font-size:.85rem; letter-spacing:.25rem; text-transform:uppercase; color:#93c5fd; opacity:.9; }
-    .section-title h2 { font-size:clamp(1.6rem, 3vw, 2.2rem); margin-top:8px; }
-    .section-title h2 span { color:#ffd54a; }
+    section{padding:54px 0}
+    .section-title{text-align:center;margin-bottom:20px}
+    .kicker{font-size:.78rem;letter-spacing:.22rem;color:#93c5fd;text-transform:uppercase}
+    .section-title h2{font-size:clamp(1.2rem,4vw,1.6rem);margin-top:8px}
+    .muted{color:var(--muted);font-size:.98rem}
 
-    /* Features */
-    .grid { display:grid; gap:22px; }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .card { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:26px; backdrop-filter: blur(8px); box-shadow: 0 20px 40px rgba(0,0,0,.35); transition:.3s; }
-    .card:hover { transform: translateY(-6px); border-color: rgba(255,213,74,.45); box-shadow:0 25px 60px rgba(255,213,74,.18); }
-    .card i { font-size:1.6rem; color:#ffd54a; }
-    .card h3 { margin:12px 0 8px; }
-    .muted { color:#b6c3db; }
+    /* Grid utilities */
+    .grid{display:grid;gap:16px}
+    .grid-3{grid-template-columns:1fr}
+    .card{background:var(--card);border:1px solid var(--glass-border);border-radius:14px;padding:16px;backdrop-filter:blur(6px);transition:transform .28s var(--ease),box-shadow .28s var(--ease)}
+    .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.45)}
+    .card i{color:var(--accent);font-size:1.25rem}
 
-    /* Ribbon Stats */
-    .stats { display:grid; gap:16px; grid-template-columns: repeat(4, 1fr); margin-top:16px; }
-    .stat { background:#0e1420; border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:18px; text-align:center; }
-    .stat b { font-size:1.4rem; color:#ffd54a; }
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .stat{background:#0e1420;border:1px solid rgba(255,255,255,.04);border-radius:12px;padding:12px;text-align:center}
+    .stat b{color:var(--accent);font-size:1.25rem}
+
+    /* Portfolio image card */
+    .card img{border-radius:10px}
 
     /* CTA band */
-    .cta-band { background: radial-gradient(120% 120% at 10% 10%, rgba(255,213,74,.14), rgba(255,255,255,0) 40%), #0b0e14; border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06); }
-    .cta-card { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:26px; }
+    .cta-band .cta-card{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 
-    /* Testimonials Preview */
-    .marquee { overflow:hidden; position:relative; }
-    .marquee-track { display:flex; gap:16px; animation: marquee 30s linear infinite; }
-    @keyframes marquee { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
-    .quote { min-width:360px; background:#0f172a; border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px; }
-    .quote .who { display:flex; align-items:center; gap:12px; margin-top:10px; font-weight:600; }
+    /* Testimonials marquee (simple) */
+    .marquee{overflow:hidden}
+    .marquee-track{display:flex;gap:12px;animation:marq 30s linear infinite}
+    @keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .quote{min-width:260px;background:#0f172a;border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,.04)}
 
-    /* Footer */
-    footer { background:#0a0f18; border-top:1px solid rgba(255,255,255,.06); }
-    .footgrid { display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap:24px; }
-    .footgrid h4 { margin-bottom:10px; }
-    .footgrid ul { list-style:none; padding:0; margin:0; }
-    .footgrid li { margin:8px 0; opacity:.9; }
-    .social a { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,.06); margin-right:8px; }
-    .legal { text-align:center; color:#94a3b8; font-size:.9rem; padding:18px 0 8px; }
+    /* Contact: split layout -> collapses on small */
+    .contact-grid{display:grid;gap:16px;grid-template-columns:1fr}
+    form{display:flex;flex-direction:column;gap:10px}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    .input{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.02);color:inherit;outline:none}
+    .input:focus{box-shadow:0 0 0 6px rgba(255,213,74,.06);border-color:var(--accent)}
 
-    /* Floating Buttons */
-    .whatsapp-float { position: fixed; width:56px; height:56px; bottom: 24px; right: 22px; background: #25D366; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:28px; box-shadow:0 10px 30px rgba(0,0,0,.35); z-index: 1200; transition:.2s; }
-    .whatsapp-float:hover { transform: scale(1.08); }
+    /* Aside card */
+    aside.card{padding:14px}
 
-    .backtotop { position: fixed; bottom: 24px; left: 22px; width:46px; height:46px; border-radius:50%; display:grid; place-items:center; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); backdrop-filter: blur(8px); z-index:1200; opacity:0; pointer-events:none; transition:.25s; }
-    .backtotop.show{ opacity:1; pointer-events:auto; }
+    /* Floating buttons */
+    .whatsapp-float{position:fixed;right:18px;bottom:20px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:20px;z-index:1400;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+    .backtotop{position:fixed;left:18px;bottom:20px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);z-index:1400;opacity:0;pointer-events:none;transition:opacity .2s}
+    .backtotop.show{opacity:1;pointer-events:auto}
 
     /* Preloader */
-    #preloader { position:fixed; inset:0; background:#0b0e14; display:grid; place-items:center; z-index:2000; }
-    .spinner { width:58px; height:58px; border:5px solid #ffd54a; border-top-color:transparent; border-radius:50%; animation:spin .9s linear infinite; }
-    @keyframes spin { to{ transform:rotate(360deg) } }
+    #preloader{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:2000}
+    .spinner{width:56px;height:56px;border:5px solid var(--accent);border-top-color:transparent;border-radius:50%;animation:spin .9s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
 
-    /* Mobile */
-    @media (max-width: 980px) {
-      nav ul { position: fixed; top:78px; right:18px; background:#0b1220; border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px; display:none; flex-direction:column; gap:10px; width:min(86vw, 320px); box-shadow:0 20px 50px rgba(0,0,0,.5); }
-      nav ul.show { display:flex; }
-      .menu-toggle { display:block; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .footgrid { grid-template-columns: 1fr 1fr; }
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.03);padding:28px 0;background:#071018}
+    .footgrid{display:grid;grid-template-columns:1fr;gap:16px}
+    .social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.03);margin-right:8px}
+
+    /* Small tweaks: reduce heavy shadow on small devices */
+    @media(min-width:760px){
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .stats{grid-template-columns:repeat(4,1fr)}
+      .contact-grid{grid-template-columns:2fr 1fr}
+      .cta-band .cta-card{flex-direction:row;align-items:center;justify-content:space-between}
+      .marquee-track{animation-duration:40s}
+      .footgrid{grid-template-columns:2fr 1fr 1fr 1fr}
+    }
+    @media(min-width:1100px){
+      .grid-3{grid-template-columns:repeat(3,1fr)}
+      .hero{min-height:72vh}
+      .mobile-panel{display:none}
+      .nav-links{display:flex}
     }
 
-    @media (max-width: 560px) {
-      .quote { min-width: 280px; }
-      .stats { grid-template-columns: 1fr; }
-      .footgrid { grid-template-columns: 1fr; }
-    }
+    /* MENU - when showing */
+    .mobile-panel.show{display:flex}
+    .mobile-backdrop.show{display:block}
+
+    /* small visual helpers */
+    .muted{color:var(--muted)}
+    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
   </style>
 </head>
 <body>
   <!-- Preloader -->
-  <div id="preloader" aria-hidden="true"><div class="spinner" role="status" aria-label="Loading"></div></div>
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner" role="status" aria-label="Loading"></div>
+  </div>
 
   <!-- Top strip -->
   <div class="top-strip">
     <div class="container">
-      <div class="row">
-        <div><i class="fa-solid fa-phone"></i> <a href="tel:+91XXXXXXXXXX">+91 8467063125</a> &nbsp; | &nbsp; <i class="fa-solid fa-envelope"></i> <a href="mailto:hello@urgd.co">rudradigitalmarketing2212@gmail.com</a></div>
-        <div class="cta-mini"><span class="badge-pill">NEW</span> <span>Limited-time launch offer — <b>Up to 30% off!</b></span></div>
+      <div class="top-row" role="region" aria-label="Top contact">
+        <div><i class="fa-solid fa-phone"></i> <a href="tel:+918467063125">+91 8467063125</a> &nbsp; | &nbsp; <i class="fa-solid fa-envelope"></i> <a href="mailto:rudradigitalmarketing2212@gmail.com">rudradigitalmarketing2212@gmail.com</a></div>
+        <div class="badge-row"><span class="badge-pill">NEW</span> <span style="margin-left:8px;color:var(--muted)">Limited-time launch offer — <strong>Up to 30% off!</strong></span></div>
       </div>
     </div>
   </div>
 
-  <!-- Header / Navigation -->
-  <header class="navwrap">
-    <div class="container nav" role="navigation" aria-label="Main Navigation">
-      <a class="brand" href="#home" aria-label="URGD Home">
-        <img src="logo.png" alt="URGD Logo" onerror="this.style.display='none'" />
+  <!-- Header -->
+  <header class="navwrap" role="banner">
+    <div class="container nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="URGD home">
+        <img src="logo.png" alt="URGD Logo" onerror="this.style.display='none'">
         <div class="name">🌟 <span>URGD</span> — UNIQUE RUDRAxGARG</div>
       </a>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home" class="active">Home</a></li>
-         <li><a href="about.html">about</a></li> 
-          <li><a href="services.html">Services</a></li>
-          <li><a href="#why">Why Us</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="pricing.html" class="btn btn-primary" style="display:inline-block">Get Quote</a></li>
-        </ul>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+
+      <nav aria-label="Primary">
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="active">Home</a>
+          <a href="#why">Why Us</a>
+          <a href="#services">Services</a>
+          <a href="#work">Portfolio</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+          <a href="#pricing" class="btn btn-primary" style="white-space:nowrap">Get Quote</a>
+        </div>
+
+        <button id="menuToggle" aria-expanded="false" aria-controls="mobilePanel" class="menu-toggle" title="Open menu">
+          <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">Menu</span>
+        </button>
+
+        <div id="mobileBackdrop" class="mobile-backdrop" tabindex="-1" aria-hidden="true"></div>
+
+        <div id="mobilePanel" class="mobile-panel" role="menu" aria-hidden="true" aria-labelledby="menuToggle">
+          <a href="#home" role="menuitem">Home</a>
+          <a href="#why" role="menuitem">Why Us</a>
+          <a href="#services" role="menuitem">Services</a>
+          <a href="#work" role="menuitem">Portfolio</a>
+          <a href="#testimonials" role="menuitem">Testimonials</a>
+          <a href="#contact" role="menuitem">Contact</a>
+          <a href="#pricing" role="menuitem" class="btn btn-primary" style="display:inline-block;margin-top:6px">Get Quote</a>
+        </div>
       </nav>
     </div>
   </header>
 
-  <!-- Quotes Banner -->
-  <section class="ad-banner" aria-label="Inspiration ticker">
-    <div class="ad-track">
-      <div class="ad-content">
-        <span>💡 "Dream big, work hard, stay focused." – Bill Gates</span>
-        <span>🌟 "You have to dream before your dreams can come true." – A.P.J. Abdul Kalam</span>
-        <span>🚀 "Success is not final, failure is not fatal." – Winston Churchill</span>
-        <span>📈 "Don't watch the clock; keep going." – Sam Levenson</span>
-        <span>🔥 "Innovation distinguishes leaders from followers." – Steve Jobs</span>
-      </div>
-    </div>
-  </section>
-
   <!-- Hero -->
   <section id="home" class="hero" aria-label="Hero">
-    <div class="container" style="position:relative; z-index:2;">
+    <div class="container">
       <h1>🚀 Grow Faster with Premium Websites & Performance Marketing</h1>
-      <p>We build high-converting websites and run ROI-focused campaigns. <b>Fast delivery</b>, <b>creative design</b>, and <b>real results</b> — trusted by startups and enterprises.
-      </p>
+      <p>We build high-converting websites and run ROI-focused campaigns. <strong>Fast delivery</strong>, <strong>creative design</strong>, and <strong>real results</strong> — trusted by startups and enterprises.</p>
       <div class="cta-row">
-        <a href="#services" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Explore Services</a>
-        <a href="#contact" class="btn btn-ghost"><i class="fa-solid fa-calendar-check"></i> Book a Free Call</a>
+        <a href="#services" class="btn btn-primary" aria-label="Explore Services"><i class="fa-solid fa-rocket"></i> Explore Services</a>
+        <a href="#contact" class="btn btn-ghost" aria-label="Book a Free Call"><i class="fa-solid fa-calendar-check"></i> Book a Free Call</a>
       </div>
     </div>
-    <div class="scroll-down"><a href="#why" aria-label="Scroll to features"><i class="fas fa-angles-down"></i></a></div>
+    <div class="scroll-down" aria-hidden="true"><a href="#why"><i class="fas fa-angles-down"></i></a></div>
   </section>
 
-  <!-- Why Us / Features -->
-  <section id="why">
+  <!-- WHY -->
+  <section id="why" aria-label="Why choose us">
     <div class="container">
       <div class="section-title">
-        <div class="kicker">Why <b>URGD</b></div>
-        <h2>Enterprise‑grade quality. <span>Startup speed.</span></h2>
+        <div class="kicker">Why <strong>URGD</strong></div>
+        <h2>Enterprise-grade quality. <span>Startup speed.</span></h2>
         <p class="muted">Everything you need to look like a big brand and perform like one.</p>
       </div>
 
       <div class="grid grid-3" role="list">
-        <article class="card" role="listitem">
-          <i class="fa-solid fa-bolt"></i>
-          <h3>Blazing Delivery</h3>
-          <p class="muted">Launch in days, not months — without compromising on polish.</p>
-        </article>
-        <article class="card" role="listitem">
-          <i class="fa-solid fa-pen-nib"></i>
-          <h3>Conversion‑first Design</h3>
-          <p class="muted">Copy, layouts, and CTAs crafted to turn visitors into customers.</p>
-        </article>
-        <article class="card" role="listitem">
-          <i class="fa-solid fa-mobile-screen"></i>
-          <h3>100% Responsive</h3>
-          <p class="muted">Pixel‑perfect across mobile, tablet, and desktop.</p>
-        </article>
-        <article class="card" role="listitem">
-          <i class="fa-solid fa-magnifying-glass-chart"></i>
-          <h3>SEO + Performance</h3>
-          <p class="muted">Clean markup, fast loads, and best‑practice metadata out of the box.</p>
-        </article>
-        <article class="card" role="listitem">
-          <i class="fa-solid fa-shield-heart"></i>
-          <h3>Reliable Support</h3>
-          <p class="muted">We ship, we maintain, and we help you grow.</p>
-        </article>
-        <article class="card" role="listitem">
-          <i class="fa-solid fa-ranking-star"></i>
-          <h3>Results You Can Measure</h3>
-          <p class="muted">Analytics‑driven decisions to improve ROI month after month.</p>
-        </article>
+        <article class="card" role="listitem"><i class="fa-solid fa-bolt"></i><h3>Blazing Delivery</h3><p class="muted">Launch in days, not months — without compromising on polish.</p></article>
+        <article class="card" role="listitem"><i class="fa-solid fa-pen-nib"></i><h3>Conversion-first Design</h3><p class="muted">Layouts and CTAs crafted to turn visitors into customers.</p></article>
+        <article class="card" role="listitem"><i class="fa-solid fa-mobile-screen"></i><h3>100% Responsive</h3><p class="muted">Pixel-perfect across mobile, tablet, and desktop.</p></article>
+        <article class="card" role="listitem"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>SEO + Performance</h3><p class="muted">Clean markup, fast loads, and metadata best-practices.</p></article>
+        <article class="card" role="listitem"><i class="fa-solid fa-shield-heart"></i><h3>Reliable Support</h3><p class="muted">We ship, maintain, and help you grow.</p></article>
+        <article class="card" role="listitem"><i class="fa-solid fa-ranking-star"></i><h3>Results You Can Measure</h3><p class="muted">Analytics-driven decisions to improve ROI month after month.</p></article>
       </div>
 
-      <div class="stats">
+      <div class="stats" aria-hidden="false">
         <div class="stat"><b>150+</b><div class="muted">Projects Delivered</div></div>
         <div class="stat"><b>40%</b><div class="muted">Avg. Speed Gain</div></div>
         <div class="stat"><b>4.9★</b><div class="muted">Client Rating</div></div>
@@ -283,356 +274,313 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services">
+  <!-- SERVICES -->
+  <section id="services" aria-label="Services">
     <div class="container">
-      <div class="section-title">
-        <div class="kicker">Services</div>
-        <h2>Everything to <span>launch</span> and <span>scale</span> online</h2>
-      </div>
+      <div class="section-title"><div class="kicker">Services</div><h2>Everything to <span>launch</span> and <span>scale</span> online</h2></div>
       <div class="grid grid-3">
-        <article class="card">
-          <i class="fa-solid fa-laptop-code"></i>
-          <h3>Web Design & Development</h3>
-          <p class="muted">Modern, accessible, and blazing‑fast websites with a conversion‑focused UX.</p>
-        </article>
-        <article class="card">
-          <i class="fa-solid fa-chart-line"></i>
-          <h3>SEO & Content</h3>
-          <p class="muted">Keyword strategy, on‑page SEO, and content that ranks and converts.</p>
-        </article>
-        <article class="card">
-          <i class="fa-brands fa-google"></i>
-          <h3>Performance Ads</h3>
-          <p class="muted">Google & Meta ads with tight targeting and relentless A/B testing.</p>
-        </article>
-        <article class="card">
-          <i class="fa-solid fa-bullhorn"></i>
-          <h3>Branding & Identity</h3>
-          <p class="muted">Logos, color systems, and brand kits that feel premium.</p>
-        </article>
-        <article class="card">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <h3>E‑commerce</h3>
-          <p class="muted">High‑converting storefronts with seamless checkout and analytics.</p>
-        </article>
-        <article class="card">
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-          <h3>Maintenance & Support</h3>
-          <p class="muted">Security, backups, updates, and 24×7 monitoring.</p>
-        </article>
+        <article class="card"><i class="fa-solid fa-laptop-code"></i><h3>Web Design & Development</h3><p class="muted">Accessible, fast websites with conversion-focused UX.</p></article>
+        <article class="card"><i class="fa-solid fa-chart-line"></i><h3>SEO & Content</h3><p class="muted">Keyword strategy, on-page SEO, and content that ranks.</p></article>
+        <article class="card"><i class="fa-brands fa-google"></i><h3>Performance Ads</h3><p class="muted">Google & Meta ads with tight targeting and A/B testing.</p></article>
+        <article class="card"><i class="fa-solid fa-bullhorn"></i><h3>Branding & Identity</h3><p class="muted">Logos, color systems, and brand kits that feel premium.</p></article>
+        <article class="card"><i class="fa-solid fa-cart-shopping"></i><h3>E-commerce</h3><p class="muted">High-converting stores with analytics-ready funnels.</p></article>
+        <article class="card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Maintenance & Support</h3><p class="muted">Security, backups, updates, and 24×7 monitoring.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- CTA Band -->
-  <section class="cta-band" id="pricing">
+  <!-- CTA -->
+  <section id="pricing" class="cta-band" aria-label="Call to action">
     <div class="container">
-      <div class="cta-card">
+      <div class="cta-card card">
         <div>
           <h3 style="margin:0 0 6px">Ready to launch your next big thing?</h3>
           <div class="muted">Instant proposal & timeline within 24 hours.</div>
         </div>
-        <div class="cta-row" style="margin:0">
+        <div class="cta-row" style="justify-content:flex-end">
           <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-message"></i> Get a Free Quote</a>
-          <a href="https://wa.me/918467063125" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+          <a href="https://wa.me/918467063125" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Preview (simple placeholders) -->
-  <section id="work">
+  <!-- PORTFOLIO -->
+  <section id="work" aria-label="Portfolio">
     <div class="container">
-      <div class="section-title">
-        <div class="kicker">Portfolio</div>
-        <h2>Recent <span>Work</span> Highlights</h2>
-      </div>
+      <div class="section-title"><div class="kicker">Portfolio</div><h2>Recent <span>Work</span> Highlights</h2></div>
       <div class="grid grid-3">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1522202222206-5a813b2a8b4a?q=80&w=1200&auto=format&fit=crop" alt="SaaS website preview" loading="lazy" />
-          <h3 style="margin-top:12px">SaaS Growth Site</h3>
-          <p class="muted">+120% sign‑ups after revamp. Lighthouse 98/100.</p>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1200&auto=format&fit=crop" alt="E‑commerce storefront" loading="lazy" />
-          <h3 style="margin-top:12px">D2C E‑commerce</h3>
-          <p class="muted">3.1× ROAS with optimized funnels & PDPs.</p>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1200&auto=format&fit=crop" alt="Corporate brand" loading="lazy" />
-          <h3 style="margin-top:12px">Corporate Rebrand</h3>
-          <p class="muted">A fresh identity system across web, socials, and print.</p>
-        </article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1522202222206-5a813b2a8b4a?q=80&w=1200&auto=format&fit=crop" alt="SaaS website preview" loading="lazy"><h3 style="margin-top:10px">SaaS Growth Site</h3><p class="muted">+120% sign-ups after revamp. Lighthouse 98/100.</p></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1200&auto=format&fit=crop" alt="Ecommerce preview" loading="lazy"><h3 style="margin-top:10px">D2C E-commerce</h3><p class="muted">3.1× ROAS with optimized funnels & PDPs.</p></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1200&auto=format&fit=crop" alt="Corporate brand" loading="lazy"><h3 style="margin-top:10px">Corporate Rebrand</h3><p class="muted">A fresh identity system across web, socials, and print.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials (marquee style) -->
-  <section id="testimonials">
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" aria-label="Testimonials">
     <div class="container">
-      <div class="section-title">
-        <div class="kicker">Loved by Clients</div>
-        <h2>What our partners <span>say</span></h2>
-      </div>
-      <div class="marquee" aria-label="Client testimonials">
-        <div class="marquee-track">
-          <div class="quote">
-            <p>“URGD rebuilt our site in under two weeks — conversions doubled.”</p>
-            <div class="who"><i class="fa-solid fa-user"></i> Priya, D2C Founder</div>
-          </div>
-          <div class="quote">
-            <p>“Clean code, fast pages, and a design our customers love.”</p>
-            <div class="who"><i class="fa-solid fa-user-tie"></i> Arjun, SaaS CEO</div>
-          </div>
-          <div class="quote">
-            <p>“The team is proactive and data‑driven. We finally scale profitably.”</p>
-            <div class="who"><i class="fa-solid fa-user-check"></i> Neha, Marketing Lead</div>
-          </div>
-          <div class="quote">
-            <p>“Best agency experience we’ve had — 10/10.”</p>
-            <div class="who"><i class="fa-solid fa-user-shield"></i> Rakesh, CTO</div>
-          </div>
-          <!-- Duplicate for infinite loop smoothness -->
-          <div class="quote">
-            <p>“URGD rebuilt our site in under two weeks — conversions doubled.”</p>
-            <div class="who"><i class="fa-solid fa-user"></i> Priya, D2C Founder</div>
-          </div>
-          <div class="quote">
-            <p>“Clean code, fast pages, and a design our customers love.”</p>
-            <div class="who"><i class="fa-solid fa-user-tie"></i> Arjun, SaaS CEO</div>
-          </div>
-          <div class="quote">
-            <p>“The team is proactive and data‑driven. We finally scale profitably.”</p>
-            <div class="who"><i class="fa-solid fa-user-check"></i> Neha, Marketing Lead</div>
-          </div>
-          <div class="quote">
-            <p>“Best agency experience we’ve had — 10/10.”</p>
-            <div class="who"><i class="fa-solid fa-user-shield"></i> Rakesh, CTO</div>
-          </div>
+      <div class="section-title"><div class="kicker">Loved by Clients</div><h2>What our partners <span>say</span></h2></div>
+      <div class="marquee" aria-hidden="false">
+        <div class="marquee-track" aria-live="polite">
+          <!-- Duplicate block for smoother loop -->
+          <div class="quote card"><p>“URGD rebuilt our site in under two weeks — conversions doubled.”</p><div class="who muted" style="margin-top:8px"><i class="fa-solid fa-user"></i> Priya, D2C Founder</div></div>
+          <div class="quote card"><p>“Clean code, fast pages, and a design our customers love.”</p><div class="who muted" style="margin-top:8px"><i class="fa-solid fa-user-tie"></i> Arjun, SaaS CEO</div></div>
+          <div class="quote card"><p>“The team is proactive and data-driven. We finally scale profitably.”</p><div class="who muted" style="margin-top:8px"><i class="fa-solid fa-user-check"></i> Neha, Marketing Lead</div></div>
+          <div class="quote card"><p>“Best agency experience we’ve had — 10/10.”</p><div class="who muted" style="margin-top:8px"><i class="fa-solid fa-user-shield"></i> Rakesh, CTO</div></div>
+
+          <!-- Duplicate for loop -->
+          <div class="quote card"><p>“URGD rebuilt our site in under two weeks — conversions doubled.”</p><div class="who muted" style="margin-top:8px"><i class="fa-solid fa-user"></i> Priya, D2C Founder</div></div>
+          <div class="quote card"><p>“Clean code, fast pages, and a design our customers love.”</p><div class="who muted" style="margin-top:8px"><i class="fa-solid fa-user-tie"></i> Arjun, SaaS CEO</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
+  <!-- CONTACT -->
+  <section id="contact" aria-label="Contact">
     <div class="container">
-      <div class="section-title">
-        <div class="kicker">Contact</div>
-        <h2>Start your project <span>today</span></h2>
-     <p class="muted">We’ll get back within a few hours.</p>
-</div>
+      <div class="section-title"><div class="kicker">Contact</div><h2>Start your project <span>today</span></h2><p class="muted">We’ll get back within a few hours.</p></div>
 
-<div class="grid grid-3" style="grid-template-columns:2fr 1fr; gap:26px;">
-  <form class="card" id="contactForm" onsubmit="sendToWhatsApp(event)">
-    <div class="grid" style="grid-template-columns:1fr 1fr; gap:14px;">
-      <div>
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required class="input" placeholder="Your name" />
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required class="input" placeholder="you@example.com" />
-      </div>
-    </div>
+      <div class="contact-grid">
+        <form class="card" id="contactForm" aria-label="Contact form">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" required class="input" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required class="input" placeholder="you@example.com" />
+            </div>
+          </div>
 
-    <div class="grid" style="grid-template-columns:1fr 1fr; gap:14px; margin-top:12px;">
-      <div>
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" class="input" placeholder="+91 XXXXX XXXXX" />
-      </div>
-      <div>
-        <label for="service">Service</label>
-        <select id="service" name="service" class="input">
-          <option>Web Design</option>
-          <option>SEO & Marketing</option>
-          <option>App Development</option>
-          <option>Branding</option>
-        </select>
-      </div>
-    </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px">
+            <div>
+              <label for="phone">Phone *</label>
+              <input id="phone" name="phone" type="tel" class="input" placeholder="+91 XXXXX XXXXX" />
+            </div>
+            <div>
+              <label for="service">Service</label>
+              <select id="service" name="service" class="input">
+                <option>Web Design</option>
+                <option>SEO & Marketing</option>
+                <option>App Development</option>
+                <option>Branding</option>
+              </select>
+            </div>
+          </div>
 
-    <div style="margin-top:12px;">
-      <label for="message">Project Details</label>
-      <textarea id="message" name="message" rows="5" class="input" placeholder="Tell us about your goals…"></textarea>
-    </div>
+          <div style="margin-top:8px">
+            <label for="message">Project Details *</label>
+            <textarea id="message" name="message" rows="5" class="input" placeholder="Tell us about your goals…" required></textarea>
+          </div>
 
-    <div class="cta-row" style="justify-content:flex-start; margin-top:10px;">
-      <button type="submit" class="btn btn-primary">
-        <i class="fa-solid fa-paper-plane"></i> Send on WhatsApp
-      </button>
-      <a href="mailto:hello@urgd.co" class="btn btn-ghost">
-        <i class="fa-solid fa-envelope"></i> Email Us
-      </a>
-    </div>
+          <div class="cta-row" style="justify-content:flex-start;margin-top:8px">
+            <button type="submit" class="btn btn-primary" id="sendBtn"><i class="fa-solid fa-paper-plane"></i> Send on WhatsApp</button>
+            <a href="mailto:rudradigitalmarketing2212@gmail.com" class="btn btn-ghost" style="display:inline-flex;align-items:center"><i class="fa-solid fa-envelope"></i> Email Us</a>
+          </div>
 
-    <p id="formNote" class="muted" style="margin-top:8px; display:none;">
-      ✅ Your message is ready to be sent on WhatsApp.
-    </p>
-  </form>
-</div>
+          <p id="formNote" class="muted" style="margin-top:8px;display:none;">✅ Your message is ready to be sent on WhatsApp.</p>
+        </form>
 
-<script>
-  function sendToWhatsApp(event) {
-    event.preventDefault();
-
-    // WhatsApp number with country code
-    const phoneNumber = "918467063125";
-
-    // Get form data
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const service = document.getElementById("service").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    // Validation
-    if (name === "" || email === "" || phone === "" || message === "") {
-      alert("⚠️ Please fill all required fields before sending.");
-      return;
-    }
-
-    // Create WhatsApp message
-    const finalMessage = `Hello URGD Marketing Team 👋,\n\n` +
-      `My name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${phone}\n` +
-      `Service Interested: ${service}\n\n` +
-      `Project Details:\n${message}`;
-
-    // Open WhatsApp
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(finalMessage)}`;
-    window.open(url, "_blank");
-
-    // Show confirmation note
-    document.getElementById("formNote").style.display = "block";
-  }
-</script>
-
-</script>
-
-
-        <aside class="card">
-          <h3>Let’s talk</h3>
+        <aside class="card" aria-label="Contact details">
+          <h3 style="margin-top:0">Let’s talk</h3>
           <p class="muted">Mon–Sat, 10:00–19:00 IST</p>
           <p><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh</p>
           <p><i class="fa-solid fa-envelope"></i> rudradigitalmarketing2212@gmail.com</p>
           <p><i class="fa-solid fa-phone"></i> +91 8467063125</p>
-          <div class="cta-row" style="margin-top:12px;">
-            <a href="https://wa.me/91846706312" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+          <div class="cta-row" style="margin-top:12px">
+            <a href="https://wa.me/918467063125" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
           </div>
         </aside>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container" style="padding:46px 0;">
+  <!-- FOOTER -->
+  <footer aria-label="Footer">
+    <div class="container" style="padding:22px 0">
       <div class="footgrid">
         <div>
-          <div class="brand" style="margin-bottom:10px;">
-            <img src="logo.png" alt="URGD Logo" onerror="this.style.display='none'" />
-            <div class="name">🌟 <span>URGD</span></div>
+          <div class="brand" style="margin-bottom:10px">
+            <img src="logo.png" alt="URGD logo" onerror="this.style.display='none'">
+            <div class="name" style="font-size:1rem">🌟 <span>URGD</span></div>
           </div>
           <p class="muted">Enterprise polish. Startup speed. We help you win online.</p>
-          
         </div>
+
         <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#work">Portfolio</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <h4 style="margin-bottom:8px">Company</h4>
+          <ul style="list-style:none;padding:0;margin:0">
+            <li style="margin:6px 0"><a href="#services">Services</a></li>
+            <li style="margin:6px 0"><a href="#work">Portfolio</a></li>
+            <li style="margin:6px 0"><a href="#testimonials">Testimonials</a></li>
+            <li style="margin:6px 0"><a href="#contact">Contact</a></li>
           </ul>
         </div>
+
         <div>
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Refund Policy</a></li>
+          <h4 style="margin-bottom:8px">Legal</h4>
+          <ul style="list-style:none;padding:0;margin:0">
+            <li style="margin:6px 0"><a href="#">Privacy Policy</a></li>
+            <li style="margin:6px 0"><a href="#">Terms of Service</a></li>
           </ul>
         </div>
+
         <div>
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Free Audit</a></li>
-            <li><a href="#">Brand Kit</a></li>
+          <h4 style="margin-bottom:8px">Resources</h4>
+          <ul style="list-style:none;padding:0;margin:0">
+            <li style="margin:6px 0"><a href="#">Blog</a></li>
+            <li style="margin:6px 0"><a href="#">Free Audit</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="legal">© <span id="year"></span> URGD — UNIQUE RUDRAxGARG DIGITAL MARKETING. All rights reserved.</div>
+    <div style="text-align:center;color:#94a3b8;font-size:.92rem;padding-bottom:8px">© <span id="year"></span> URGD — UNIQUE RUDRAxGARG DIGITAL MARKETING. All rights reserved.</div>
   </footer>
 
-  <!-- Floating buttons -->
-  <a href="https://wa.me/918467063125" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
- 
+  <!-- Floating -->
+  <a href="https://wa.me/918467063125" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <button id="backToTop" class="backtotop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-  <!-- Minimal form/input styles -->
-  <style>
-    label { display:block; margin:0 0 6px; font-weight:600; }
-    .input { width:100%; border-radius:12px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.04); color:#e8eefc; padding:12px 14px; outline:none; transition:.2s; }
-    .input:focus { border-color:#ffd54a; box-shadow:0 0 0 4px rgba(255,213,74,.12); }
-    textarea.input { resize:vertical; }
-  </style>
-
   <script>
+    // ---------- Helpers ----------
+    const $ = (sel) => document.querySelector(sel);
+    const $$ = (sel) => document.querySelectorAll(sel);
+
     // Preloader
-    window.addEventListener('load', () => {
-      document.getElementById('preloader').style.display = 'none';
+    window.addEventListener('load', ()=> {
+      const p = $('#preloader');
+      if(p) p.style.display = 'none';
     });
 
-    // Mobile Menu Toggle + body scroll lock
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-      document.body.classList.toggle('no-scroll');
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle with accessible states + backdrop
+    const menuToggle = $('#menuToggle');
+    const mobilePanel = $('#mobilePanel');
+    const mobileBackdrop = $('#mobileBackdrop');
+
+    function openMenu(){
+      mobilePanel.classList.add('show');
+      mobileBackdrop.classList.add('show');
+      menuToggle.setAttribute('aria-expanded','true');
+      mobilePanel.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden'; // lock scroll
+    }
+    function closeMenu(){
+      mobilePanel.classList.remove('show');
+      mobileBackdrop.classList.remove('show');
+      menuToggle.setAttribute('aria-expanded','false');
+      mobilePanel.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const open = mobilePanel.classList.contains('show');
+      if(open) closeMenu(); else openMenu();
     });
-    document.addEventListener('click', (e) => {
-      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-        navLinks.classList.remove('show');
-        document.body.classList.remove('no-scroll');
+
+    mobileBackdrop.addEventListener('click', closeMenu);
+    // Close when a link clicked (improves UX)
+    mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    // Close on escape
+    document.addEventListener('keydown', (e)=> { if(e.key==='Escape') closeMenu(); });
+
+    // Back to top
+    const back = $('#backToTop');
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY > 600) back.classList.add('show'); else back.classList.remove('show');
+    });
+    back.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Intersection reveal (simple)
+    const revealOptions = { threshold: .08 };
+    document.querySelectorAll('.card, .stat, .cta-card, .quote').forEach(el=>{
+      el.style.transform='translateY(18px)';
+      el.style.opacity='0';
+      el.style.transition='all .55s ease';
+      new IntersectionObserver((entries, obs)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.style.transform='translateY(0)';
+            entry.target.style.opacity='1';
+            obs.unobserve(entry.target);
+          }
+        });
+      }, revealOptions).observe(el);
+    });
+
+    // Contact form -> build message and open WhatsApp; fallback to mailto if popup blocked
+    const contactForm = $('#contactForm');
+    contactForm && contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const sendBtn = $('#sendBtn');
+      sendBtn.disabled = true;
+      sendBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Opening...';
+
+      const phoneNumber = '918467063125'; // change here if needed
+      const name = (document.getElementById('name').value || '').trim();
+      const email = (document.getElementById('email').value || '').trim();
+      const phone = (document.getElementById('phone').value || '').trim();
+      const service = (document.getElementById('service').value || '').trim();
+      const message = (document.getElementById('message').value || '').trim();
+
+      if(!name || !email || !message){
+        alert('⚠️ Please fill required fields: Name, Email, and Message.');
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send on WhatsApp';
+        return;
+      }
+
+      const finalMessage = `Hello URGD Marketing Team 👋%0A%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Email: ${encodeURIComponent(email)}%0A` +
+        `Phone: ${encodeURIComponent(phone)}%0A` +
+        `Service: ${encodeURIComponent(service)}%0A%0A` +
+        `Project details:%0A${encodeURIComponent(message)}`;
+
+      const url = `https://wa.me/${phoneNumber}?text=${finalMessage}`;
+
+      // Try opening WhatsApp in new tab/window
+      const win = window.open(url, '_blank');
+      if(win){
+        // success: show note and store message locally as demo
+        $('#formNote').style.display = 'block';
+        try{
+          const data = {name,email,phone,service,message,ts:new Date().toISOString()};
+          const list = JSON.parse(localStorage.getItem('urgd_messages')||'[]');
+          list.push(data);
+          localStorage.setItem('urgd_messages', JSON.stringify(list));
+        }catch(err){}
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send on WhatsApp';
+        contactForm.reset();
+      } else {
+        // popup blocked: fallback to mailto
+        const mailto = `mailto:rudradigitalmarketing2212@gmail.com?subject=${encodeURIComponent('Website enquiry from '+name)}&body=${encodeURIComponent('Please contact me.\n\n'+message+'\n\nPhone: '+phone)}`;
+        window.location.href = mailto;
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send on WhatsApp';
       }
     });
 
-    // Back to top button
-    const back = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 600) back.classList.add('show'); else back.classList.remove('show');
+    // Small accessibility: move focus to mobilePanel when opened
+    const observer = new MutationObserver(muts=>{
+      for(const m of muts){
+        if(m.attributeName === 'class'){
+          if(m.target.classList.contains('show')){
+            mobilePanel.querySelector('a')?.focus();
+          }else{
+            menuToggle.focus();
+          }
+        }
+      }
     });
-    back.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-    // Year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Simple contact form (stores to localStorage as demo)
-    function sendMessage(e){
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(e.target).entries());
-      const list = JSON.parse(localStorage.getItem('urgd_messages')||'[]');
-      list.push({...data, ts: new Date().toISOString()});
-      localStorage.setItem('urgd_messages', JSON.stringify(list));
-      document.getElementById('formNote').style.display='block';
-      e.target.reset();
-    }
-    window.sendMessage = sendMessage;
-
-    // Intersection reveal animations (no library)
-    const revealOptions = { threshold: 0.1 };
-    const reveal = (el)=>{ el.style.transform='translateY(0)'; el.style.opacity='1'; };
-    document.querySelectorAll('.card, .stat, .cta-card, .quote').forEach(el=>{
-      el.style.transform='translateY(16px)'; el.style.opacity='.001'; el.style.transition='all .5s ease';
-      new IntersectionObserver((entries, obs)=>{
-        entries.forEach(entry=>{ if(entry.isIntersecting){ reveal(entry.target); obs.unobserve(entry.target); } });
-      }, revealOptions).observe(el);
-    });
+    observer.observe(mobilePanel, {attributes:true});
   </script>
 </body>
 </html>
